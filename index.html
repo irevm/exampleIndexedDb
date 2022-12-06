@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IndexedDB</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/fontawesome.css">
+  <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/brands.css">
+  <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/solid.css">
+</head>
+<body>
+  <main id="app">
+    <div class="container form-container">
+      <h1 id="h1Title">New user</h1>
+      <div class="icon">
+        <i class="fa-solid fa-circle-user fa-1x icon-backgroung"></i>   
+      </div>   
+      <div class="form" id="form">
+        <input id="hiddenId" type="text" name="hiddenId" value="0">
+        <p id="show-errors"></p>
+        <p>
+          <label for="fname">First name: </label>
+          <input id="fname" type="text" name="fname" class="no-outline"/>
+        </p>
+        <p>
+          <label for="lname">Last name: </label>
+          <input id="lname" type="text" name="lname" class="no-outline"/>
+        </p>
+        <p>
+          <label for="dni">DNI: </label>
+          <input id="dni" type="text" name="dni" class="no-outline"/>
+        </p>
+        <p class="p-button">
+          <button id="sendData" onclick="sendData()">Add user</button>
+        </p>
+      </div>
+    </div>
+    
+    <div class="container users-container">
+      <ul id="users-ul">
+        <!--<li><span>1 Test</span><button>Edit user</button><button>Delete user</button></li>
+        <li><span>1 Test</span><button>Edit user</button><button>Delete user</button></li>-->
+      </ul>
+    </div>
+
+  </main>
+  <script src="index.js" defer></script>
+</body>
+</html>
