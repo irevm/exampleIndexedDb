@@ -103,6 +103,7 @@ function readUsers(db) {
   
   req.onsuccess = function(e){
     var cursor = e.target.result;
+
     if (cursor) {
       result.push(cursor.value);
       console.log(cursor.value);
@@ -111,7 +112,7 @@ function readUsers(db) {
       console.log("EOF");
       console.log(result);
       addUsersToHTML(result);
-    }    
+    }  
   };
 
   req.onerror = function(e){
