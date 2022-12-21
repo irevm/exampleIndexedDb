@@ -5,6 +5,7 @@ const DB_VERSION = 1;
 var db;
 const EDIT_USER = "Edit user";
 const NEW_USER = "New user";
+const ADD_USER = "Add user";
 var opened = false;
 
 function openDb(onDbCompleted) {
@@ -143,8 +144,11 @@ function addUsersToHTML(users){
 
 function readUser(e){
   console.log("readUser");
-  var button_id = e.target.id;
-  var user_id = document.getElementById(button_id).getAttribute("user_id");
+  
+  //Both options work
+  //var button_id = e.target.id;
+  //var user_id = document.getElementById(button_id).getAttribute("user_id");
+  var user_id = e.target.getAttribute("user_id");
 
   openDb(function(db){
     console.log(db);
@@ -250,6 +254,8 @@ function clearFormInputs(){
   document.getElementById("fname").value = "";
   document.getElementById("lname").value = "";
   document.getElementById("dni").value = "";
+  document.getElementById("sendData").innerHTML = ADD_USER;
+  document.getElementById("h1Title").innerHTML = NEW_USER;
 }
 
 window.addEventListener('load', (event) => {
